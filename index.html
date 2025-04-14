@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fallout DnD</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Fallout DnD</h1>
+    <p>Create your custom Fallout-themed DnD character</p>
+  </header>
+
+  <section id="creator">
+    <h2>Character Creator</h2>
+    <form id="character-form">
+      <label>Name: <input type="text" id="name" /></label>
+      <label>Race: 
+        <select id="race">
+          <option>Human</option>
+          <option>Ghoul</option>
+          <option>Super Mutant</option>
+          <option>Robot</option>
+        </select>
+      </label>
+      <label>Class: 
+        <select id="class">
+          <option>Wastelander</option>
+          <option>Vault Dweller</option>
+          <option>Brotherhood Knight</option>
+          <option>Enclave Agent</option>
+        </select>
+      </label>
+      <button type="button" onclick="generateStats()">Generate Stats</button>
+    </form>
+  </section>
+
+  <section id="stats">
+    <h2>Stat Sheet</h2>
+    <div id="stat-output">
+      <!-- Generated stats appear here -->
+    </div>
+  </section>
+
+  <section id="samples">
+    <h2>Sample Characters</h2>
+    <p>Example characters coming soon...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <label>Email: <input type="email" /></label>
+      <label>Message: <textarea></textarea></label>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
