@@ -14,15 +14,21 @@ function generateStats() {
   };
 
   let output = `<h3>${name} - ${race} ${charClass}</h3>`;
-  output += '<ul>';
+  output += `<form id="stat-form">`;
+
   for (const stat in stats) {
-    output += `<li><strong>${stat}:</strong> ${stats[stat]}</li>`;
+    output += `
+      <label>${stat}:
+        <input type="number" name="${stat}" value="${stats[stat]}" min="1" max="10">
+      </label>
+    `;
   }
-  output += '</ul>';
 
+  output += `<br><button type="submit">Save</button></form>`;
   document.getElementById('stat-output').innerHTML = output;
-}
 
-function randomStat() {
-  return Math.floor(Math.random() * 10) + 1;
+  document.getElementById('stat-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Stats saved (locally). You can extend this to store or export!');
+  });
 }
