@@ -1,0 +1,62 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #1c1c1c;
+  color: #f1f1c1;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2a2a2a;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #79b24a;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #79b24a;
+}
+
+section {
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+h2 {
+  color: #c2ff89;
+}
+
+form label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  background-color: #333;
+  border: 1px solid #666;
+  color: #f1f1f1;
+}
+
+button {
+  background-color: #79b24a;
+  color: #1c1c1c;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #97d75e;
+}
+
+#stat-output {
+  background-color: #2d2d2d;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #555;
+}
