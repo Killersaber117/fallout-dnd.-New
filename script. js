@@ -1,0 +1,28 @@
+function generateStats() {
+  const name = document.getElementById('name').value;
+  const race = document.getElementById('race').value;
+  const charClass = document.getElementById('class').value;
+
+  const stats = {
+    Strength: randomStat(),
+    Perception: randomStat(),
+    Endurance: randomStat(),
+    Charisma: randomStat(),
+    Intelligence: randomStat(),
+    Agility: randomStat(),
+    Luck: randomStat()
+  };
+
+  let output = `<h3>${name} - ${race} ${charClass}</h3>`;
+  output += '<ul>';
+  for (const stat in stats) {
+    output += `<li><strong>${stat}:</strong> ${stats[stat]}</li>`;
+  }
+  output += '</ul>';
+
+  document.getElementById('stat-output').innerHTML = output;
+}
+
+function randomStat() {
+  return Math.floor(Math.random() * 10) + 1;
+}
